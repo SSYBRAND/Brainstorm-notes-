@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Download Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .note-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .note-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 300px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 10px;
+        }
+
+        .note-info, .note-download {
+            padding: 20px;
+        }
+
+        .note-info {
+            flex: 1;
+        }
+
+        .note-download {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #007bff;
+            color: white;
+        }
+
+        .note-download button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        .note-download button:hover {
+            background-color: #004080;
+        }
+    </style>
+</head>
+<body>
+    <div class="note-container">
+        <div class="note-card">
+            <div class="note-info">
+                <h2>Note Title 1</h2>
+                <p>Description of the note 1 goes here.</p>
+            </div>
+            <div class="note-download">
+                <button onclick="downloadNote('note1.pdf')">Download Note</button>
+            </div>
+        </div>
+
+        <div class="note-card">
+            <div class="note-info">
+                <h2>Note Title 2</h2>
+                <p>Description of the note 2 goes here.</p>
+            </div>
+            <div class="note-download">
+                <button onclick="downloadNote('note2.pdf')">Download Note</button>
+            </div>
+        </div>
+
+        <div class="note-card">
+            <div class="note-info">
+                <h2>Note Title 3</h2>
+                <p>Description of the note 3 goes here.</p>
+            </div>
+            <div class="note-download">
+                <button onclick="downloadNote('note3.pdf')">Download Note</button>
+            </div>
+        </div>
+
+        <div class="note-card">
+            <div class="note-info">
+                <h2>Note Title 4</h2>
+                <p>Description of the note 4 goes here.</p>
+            </div>
+            <div class="note-download">
+                <button onclick="downloadNote('note4.pdf')">Download Note</button>
+            </div>
+        </div>
+
+        <div class="note-card">
+            <div class="note-info">
+                <h2>Note Title 5</h2>
+                <p>Description of the note 5 goes here.</p>
+            </div>
+            <div class="note-download">
+                <button onclick="downloadNote('note5.pdf')">Download Note</button>
+            </div>
+        </div>
+        
+        <!-- Add more note-cards as needed -->
+    </div>
+
+    <script>
+        function downloadNote(filename) {
+            const link = document.createElement('a');
+            link.href = 'path/to/your/' + filename;  // Replace with your actual note link
+            link.download = filename;  // This is the default file name
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>

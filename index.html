@@ -1,0 +1,82 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Download Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffcc70, #ff5757, #ffcc70);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .category-button {
+            padding: 20px 40px;
+            margin: 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .category-button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 8px 25px rgba(0, 86, 179, 0.5);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://see.fontimg.com/api/renderfont4/4VwY/eyJyIjoiZnMiLCJoIjoxMzAsInciOjIwMDAsImZzIjo2NSwiZmdjIjoiI0VEMzc1OSIsImJnYyI6IiNGRkZGRkYiLCJ0IjoxfQ/QnJhaW5zdG9ybSBjbGFzc2VzIA/youth-touch-demo-regular.png" alt="Welcome Banner">
+        <h1>Select Your Class For Notes</h1>
+        <button class="category-button" onclick="openClassPage('https://ssybrand.github.io/Class11Notes/')">Class 11 </button>
+        <button class="category-button" onclick="openClassPage('https://ssybrand.github.io/Class-12-Notes-/')">Class 12 </button>
+   <br></br>
+      
+   <center><font color=Blue><strong>Design BY:</font>&nbsp;<font color=red>SATYAM ❤️</font></strong></center>
+   </div>
+
+    <script>
+        function openClassPage(page) {
+            window.location.href = page;
+        }
+    </script>
+    
+</body>
+</html>
